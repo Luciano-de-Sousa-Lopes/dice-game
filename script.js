@@ -93,4 +93,6 @@ document.querySelector('.btn--new').addEventListener('click', function () {
   document.querySelector('#current--1').textContent = 0;
   document.querySelector('.player--0').classList.add('player--active');
   document.querySelector('.player--1').classList.remove('player--active');
+  // document.querySelector('.player--0').classList.add('player--winner');
+  document.querySelector('.player').classList.remove('player--winner');
 });
