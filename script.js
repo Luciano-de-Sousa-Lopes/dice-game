@@ -50,7 +50,7 @@ function addDiceNumber(diceNumber) {
 
 function checkIfPlayerWon(player, playerScore) {
   const score = Number(document.querySelector(playerScore).textContent);
-  if (score >= 10) {
+  if (score >= 100) {
     document.querySelector(player).classList.add('player--winner');
     return true;
   }
