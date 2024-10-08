@@ -50,8 +50,12 @@ function addDiceNumber(diceNumber) {
 
 function checkIfPlayerWon(player, playerScore) {
   const score = Number(document.querySelector(playerScore).textContent);
-  if (score >= 100) {
+  if (score >= 10) {
     document.querySelector(player).classList.add('player--winner');
+    document.querySelector('.btn--roll').disabled = true;
+    document.querySelector('.btn--hold').disabled = true;
+    document.querySelector('.btn--roll').classList.add('disabled--btn');
+    document.querySelector('.btn--hold').classList.add('disabled--btn');
     return true;
   }
   return false;
@@ -95,4 +99,8 @@ document.querySelector('.btn--new').addEventListener('click', function () {
   document.querySelector('.player--1').classList.remove('player--active');
   document.querySelector('.player--0').classList.remove('player--winner');
   document.querySelector('.player--1').classList.remove('player--winner');
+  document.querySelector('.btn--roll').disabled = false;
+  document.querySelector('.btn--hold').disabled = false;
+  document.querySelector('.btn--roll').classList.remove('disabled--btn');
+  document.querySelector('.btn--hold').classList.remove('disabled--btn');
 });
